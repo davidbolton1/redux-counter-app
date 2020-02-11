@@ -1,18 +1,24 @@
-const redux = require('redux')
+const redux = require('redux');
 const createStore = redux.createStore;
 
-const initalState = {
- counter: 0
-}
+const initialState = {
+	counter: 0
+};
 //Reducer
 const rootReducer = (state = initialState, action) => {
-    return state;
-}
+	return state;
+};
 //Store
 const store = createStore(rootReducer);
-console.log(store.getState())
-
+console.log(store.getState());
 
 // Dispatching Action
+store.dispatch({
+	type: 'INC_COUNTER'
+});
+store.dispatch({
+	type: 'ADD_COUNTER',
+	value: 10
+});
 
 // Subscription
