@@ -1,9 +1,12 @@
 const redux = require('redux')
 const createStore = redux.createStore;
 
+const initalState = {
+ counter: 0
+}
 //Reducer
-const rootReducer = (state, action) => {
-    return state
+const rootReducer = (state = initialState, action) => {
+    return state;
 }
 //Store
 const store = createStore(rootReducer);
