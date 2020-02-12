@@ -32,6 +32,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 results: state.results.concat({id: new Date(), value: state.counter})
                 //use concat to return new array instead of push
+                //new u id node version 4
+                //immutable JS
             };
         case actionTypes.DELETE_RESULT:
             //const newArray = [...state.results]
